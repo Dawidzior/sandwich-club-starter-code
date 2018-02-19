@@ -41,19 +41,19 @@ public class JsonUtils {
                 }
             }
 
-            if (sandwich.has(PLACE_OF_ORIGIN)) {
+            if (isDataAvailable(sandwich, PLACE_OF_ORIGIN)) {
                 placeOfOrigin = sandwich.getString(PLACE_OF_ORIGIN);
             }
 
-            if (sandwich.has(DESCRIPTION)) {
+            if (isDataAvailable(sandwich, DESCRIPTION)) {
                 description = sandwich.getString(DESCRIPTION);
             }
 
-            if (sandwich.has(IMAGE)) {
+            if (isDataAvailable(sandwich, IMAGE)) {
                 imageLink = sandwich.getString(IMAGE);
             }
 
-            if (sandwich.has(INGREDIENTS)) {
+            if (isDataAvailable(sandwich, INGREDIENTS)) {
                 JSONArray ingredientsJsonList = sandwich.getJSONArray(INGREDIENTS);
                 for (int i = 0; i < ingredientsJsonList.length(); i++) {
                     ingredients.add(ingredientsJsonList.getString(i));
@@ -66,5 +66,9 @@ public class JsonUtils {
             Log.e(CLASS_TAG, "Invalid JSONObject.", e);
         }
         return null;
+    }
+
+    private static boolean isDataAvailable(JSONObject sandwich, String key) {
+        return sandwich.has(key);
     }
 }

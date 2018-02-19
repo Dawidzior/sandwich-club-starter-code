@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class JsonUtils {
+
     // Statics for cleaner JSON parsing.
     private static final String NAME = "name";
     private static final String MAIN_NAME = "mainName";

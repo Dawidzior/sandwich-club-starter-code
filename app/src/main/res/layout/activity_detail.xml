@@ -38,7 +38,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/also_known_label"
             app:layout_constraintTop_toTopOf="@id/also_known_label"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            tools:text="@tools:sample/lorem"/>
 
         <TextView
             android:id="@+id/origin_label"
@@ -59,7 +60,8 @@
             app:layout_constraintStart_toEndOf="@id/origin_label"
             app:layout_constraintTop_toBottomOf="@id/image_iv"
             app:layout_constraintTop_toTopOf="@id/origin_label"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            tools:text="@tools:sample/lorem"/>
 
         <TextView
             android:id="@+id/ingredients_label"
@@ -79,7 +81,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ingredients_label"
             app:layout_constraintTop_toTopOf="@id/ingredients_label"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            tools:text="@tools:sample/lorem"/>
 
         <TextView
             android:id="@+id/description_label"
@@ -99,7 +102,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/description_label"
             app:layout_constraintTop_toTopOf="@id/description_label"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            tools:text="@tools:sample/lorem/random"/>
 
     </android.support.constraint.ConstraintLayout>
 

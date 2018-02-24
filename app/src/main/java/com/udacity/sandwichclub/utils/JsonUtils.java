@@ -31,32 +31,32 @@ public class JsonUtils {
             JSONObject sandwich = new JSONObject(jsonString);
 
             if (sandwich.getJSONObject(NAME).has(MAIN_NAME)) {
-                mainName = sandwich.getJSONObject(NAME).getString(MAIN_NAME);
+                mainName = sandwich.getJSONObject(NAME).optString(MAIN_NAME);
             }
 
             if (sandwich.getJSONObject(NAME).has(ALSO_KNOWN_AS)) {
                 JSONArray alsoKnownAsJsonList = sandwich.getJSONObject(NAME).getJSONArray(ALSO_KNOWN_AS);
                 for (int i = 0; i < alsoKnownAsJsonList.length(); i++) {
-                    alsoKnownAsList.add(alsoKnownAsJsonList.getString(i));
+                    alsoKnownAsList.add(alsoKnownAsJsonList.optString(i));
                 }
             }
 
             if (isDataAvailable(sandwich, PLACE_OF_ORIGIN)) {
-                placeOfOrigin = sandwich.getString(PLACE_OF_ORIGIN);
+                placeOfOrigin = sandwich.optString(PLACE_OF_ORIGIN);
             }
 
             if (isDataAvailable(sandwich, DESCRIPTION)) {
-                description = sandwich.getString(DESCRIPTION);
+                description = sandwich.optString(DESCRIPTION);
             }
 
             if (isDataAvailable(sandwich, IMAGE)) {
-                imageLink = sandwich.getString(IMAGE);
+                imageLink = sandwich.optString(IMAGE);
             }
 
             if (isDataAvailable(sandwich, INGREDIENTS)) {
                 JSONArray ingredientsJsonList = sandwich.getJSONArray(INGREDIENTS);
                 for (int i = 0; i < ingredientsJsonList.length(); i++) {
-                    ingredients.add(ingredientsJsonList.getString(i));
+                    ingredients.add(ingredientsJsonList.optString(i));
                 }
             }
 
